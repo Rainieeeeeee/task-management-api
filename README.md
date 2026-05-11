@@ -1,36 +1,79 @@
-# Task Management API
+# TaskFlow SaaS Platform
 
-A RESTful backend API built with Spring Boot, featuring JWT authentication, Redis caching, and AWS deployment.
+A full-stack productivity platform built with React, Spring Boot, MySQL, Redis, and AWS.  
+The platform supports secure multi-user task management with JWT authentication, protected dashboards, and RESTful API integration.
+
+---
+
+## Screenshots
+
+### Login Page
+
+<img src="docs/login.png" width="800"/>
+
+### Task Dashboard
+
+<img src="docs/dashboard.png" width="800"/>
+
+---
 
 ## Tech Stack
-- **Framework**: Spring Boot, MyBatis-Plus
-- **Database**: MySQL (AWS RDS)
-- **Cache**: Redis
-- **Security**: Spring Security, JWT, BCrypt
-- **Deployment**: AWS EC2 + RDS
+
+### Frontend
+- React
+- JavaScript
+- React Router
+- Tailwind CSS
+- Fetch API
+
+### Backend
+- Spring Boot
+- MyBatis-Plus
+- MySQL
+- Redis
+- Spring Security
+- JWT Authentication
+
+### Deployment
+- AWS EC2
+- AWS RDS
+
+---
 
 ## Features
-- User registration and login with BCrypt password encryption
+
+- User registration and login
 - JWT-based stateless authentication
-- Role-based data isolation (users can only access their own data)
-- Redis cache-aside pattern with write-invalidation strategy
-- Full CRUD operations for todo management
+- Protected frontend routes
+- Multi-user task isolation
+- Create, update, complete, and delete tasks
+- Redis cache-aside optimization
+- Responsive React/Tailwind dashboard
+- RESTful API integration
+- AWS cloud deployment
+
+---
 
 ## Architecture
-Three-tier architecture: Controller → Service → Mapper
 
-## Setup
-1. Clone the repository
-2. Copy `application.properties.example` to `application.properties`
-3. Fill in your database and Redis configuration
-4. Run `./mvnw spring-boot:run`
+Full-stack client-server architecture:
 
-## API Endpoints
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | /user/register | Register a new user |
-| POST | /user/login | Login and get JWT token |
-| GET | /todo | Get all todos (requires token) |
-| POST | /todo | Create a todo (requires token) |
-| PUT | /todo | Update a todo (requires token) |
-| DELETE | /todo/{id} | Delete a todo (requires token) |
+Frontend (React)
+↓
+REST API (Spring Boot)
+↓
+MySQL + Redis
+
+The backend follows a three-tier architecture:
+
+Controller → Service → Mapper
+
+---
+
+## Project Structure
+
+```txt
+backend/
+frontend/
+docs/
+README.md
