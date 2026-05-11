@@ -1,0 +1,66 @@
+GET http://localhost:8080/todo
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ4aWFveGlhbm52In0.bYGfGVM-VlnTUV-K4Amz-JQ25nZlhtjWPMtM82awCc8
+
+
+###
+POST http://localhost:8080/todo
+Content-Type: application/json
+
+{
+    "title": "买牛奶",
+    "completed": false
+}
+
+###
+DELETE http://localhost:8080/todo/7
+
+###
+PUT http://localhost:8080/todo
+Content-Type: application/json
+
+{"id": 3, "title": "买牛奶", "completed": true}
+
+
+###
+POST http://localhost:8080/user/register
+Content-Type: application/json
+
+{
+    "username" : "xiaoxiannv",
+    "password" : "xiaoxiannv"
+}
+
+###
+POST http://localhost:8080/user/login
+Content-Type: application/json
+
+{
+    "username" : "xiaoxiannv",
+    "password" : "xiaoxiannv"
+}
+
+###
+GET http://localhost:8080/todo
+
+###
+GET http://localhost:8080/todo
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ4aWFveGlhbm52In0.bYGfGVM-VlnTUV-K4Amz-JQ25nZlhtjWPMtM82awCc8
+
+###
+POST http://localhost:8080/todo
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ4aWFveGlhbm52In0.bYGfGVM-VlnTUV-K4Amz-JQ25nZlhtjWPMtM82awCc8
+Content-Type: application/json
+
+{
+    "title": "画画",
+    "completed": false
+}
+
+###
+POST http://18.189.6.77:8080/user/register
+Content-Type: application/json
+
+{
+    "username" : "xiaokeai",
+    "password" : "xiaokeai"
+}
