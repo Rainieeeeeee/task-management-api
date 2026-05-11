@@ -1,7 +1,13 @@
-node_modules
 
-target
+.DS_Store
 
 .env
 
-.DS_Store
+target/
+
+node_modules/
+
+frontend/node_modules/
+
+backend/target/
+
